@@ -2,12 +2,12 @@ import React from "react";
 import NotificationBar from "./NotificationBar";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
-// import FeaturesSection from "./FeaturesSection";
 import BannerGrid from "./BannerGrid";
 import OurFeatures from "./OurFeatures";
 import Banner from "./Banner";
 import NewsLetter from "./NewsLetter";
 import Footer from "../Footer";
+import FeaturesSection from "./FeaturesSection";
 // import Article from "./Article";
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <BannerGrid />
-      {/* <FeaturesSection /> */}
+      <FeaturesSection />
       <OurFeatures />
       <Banner />
       {/* <Article /> */}
