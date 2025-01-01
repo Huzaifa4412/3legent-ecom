@@ -3,6 +3,9 @@ import PrimaryBtn from "../PrimaryBtn";
 import ProductCard from "../ProductCard";
 import styles from "./FeaturesSection.module.css";
 import { client } from "@/sanity/lib/client";
+
+export const revalidate = 10; //seconds
+
 const FeaturesSection = async () => {
   const query = `*[_type == "featureProducts"] | order(_createdAt, asc)`;
   const product = await client.fetch(query);
