@@ -1,3 +1,7 @@
+
+
+
+
 type RuleType = {
     min: (value: number) => RuleType;
     max: (value: number) => RuleType;
@@ -31,6 +35,20 @@ const featureProducts = {
             options: {
                 hotspot: true, // Allows cropping in the Sanity Studio
             },
+        },
+        {
+            name: "slug",
+            title: "Url-Slug",
+            type: "slug",
+            options: {
+                source: 'name',
+                maxLength: 200, // will be ignored if slugify is set
+                slugify: input => input
+                    .toLowerCase()
+                    .replace(/\s+/g, '-')
+                    .slice(0, 200)
+            },
+            validation: Rule => Rule.required()
         },
         {
             name: 'isOnSale',
