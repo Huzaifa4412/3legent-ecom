@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
     props: {
       product,
     },
-    revalidate: 10, // revalidate every 3600 seconds
+    revalidate: 10, // revalidate every 10 seconds
   };
 };
 
