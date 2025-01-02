@@ -9,4 +9,5 @@ interface ProductCard {
     category: string;
     isOnSale: boolean;
     discountPercent: string;
+    slug: string;
 }  
