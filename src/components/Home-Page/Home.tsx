@@ -7,6 +7,7 @@ import OurFeatures from "./OurFeatures";
 import Banner from "./Banner";
 import NewsLetter from "./NewsLetter";
 import Footer from "../Footer";
+import Card from "../Card";
 import FeaturesSection from "./FeaturesSection";
 // import Article from "./Article";
 
@@ -17,6 +18,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <BannerGrid />
+      <Card />
       <FeaturesSection />
       <OurFeatures />
       <Banner />

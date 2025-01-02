@@ -53,7 +53,7 @@ const CardText = ({ title }: { title: string }) => {
   return (
     <div className="card-text ">
       <h2 className="text-[32px] font-semibold">{title}</h2>
-      <button className="flex gap-2 border-b border-b-black items-center">
+      <button className="flex gap-2 hover:gap-6 duration-500 ease-in-out border-b border-b-black items-center">
         Shop Now{" "}
         <Image
           src={"/images/banner_grid/arrow.svg"}
