@@ -1,0 +1,79 @@
+[
+  {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "discountedPrice",
+        "type": "number"
+      },
+      {
+        "name": "actualPrice",
+        "type": "number"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "productImage",
+        "type": "image"
+      },
+      {
+        "options": {
+          "source": "name",
+          "maxLength": 98
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug",
+        "title": "Url-Slug"
+      },
+      {
+        "description": "Mark this product as if it is on sale",
+        "name": "isOnSale",
+        "type": "boolean",
+        "title": "Is On sale"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 0
+              },
+              {
+                "flag": "max",
+                "constraint": 100
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Discount percentage for the sale.",
+        "hidden": "conditional",
+        "name": "discountPercent",
+        "type": "number",
+        "title": "Discount Percentage"
+      }
+    ],
+    "name": "featureProducts",
+    "type": "document",
+    "title": "Feature Products "
+  }
+]
